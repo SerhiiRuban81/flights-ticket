@@ -20,14 +20,14 @@ class Airport extends Model
         return $this->belongsTo(Country::class);
     }
 
-    public function departure_flights()
-    {
-        return $this->hasMany(Flight::class, 'departure_airport_id');
-    }
+    // public function departure_flights()
+    // {
+    //     return $this->hasMany(Flight::class, 'departure_airport_id');
+    // }
 
-    public function arrival_flights()
-    {
-        return $this->hasMany(Flight::class, 'arrival_airport_id');
-    }
+    // public function arrival_flights()
+    // {
+    //     return $this->hasMany(Flight::class, 'arrival_airport_id');
+    // }
     
 }

@@ -11,8 +11,8 @@ class Flight extends Model
     protected $fillable = [
         'flight_number', 
         'airline_id', 
-        'departure_airport_id',
-        'arrival_airport_id',
+        //'departure_airport_id',
+        //'arrival_airport_id',
         'departure_date', 
         'departure_time',
         'arrival_date', 
@@ -20,20 +20,20 @@ class Flight extends Model
         'price', 
         'seats_available'
     ];
-    public function departure_airport()
-    {
-        return $this->belongsTo(Airport::class, 'departure_airport_id');
-    }
+    // public function departure_airport()
+    // {
+    //     return $this->belongsTo(Airport::class, 'departure_airport_id');
+    // }
 
-    public function arrival_airport()
-    {
-        return $this->belongsTo(Airport::class, 'arrival_airport_id');
-    }
+    // public function arrival_airport()
+    // {
+    //     return $this->belongsTo(Airport::class, 'arrival_airport_id');
+    // }
 
-    public function airline()
-    {
-        return $this->belongsTo(Airline::class);
-    }
+     public function airline()
+     {
+         return $this->belongsTo(Airline::class);
+     }
 
     public function bookings()
     {
